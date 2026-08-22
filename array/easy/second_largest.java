@@ -1,18 +1,21 @@
-import java.util.Arrays;
 public class second_largest {
     public static void main(String[] args) {
         int[] arr = {1,2,4,7,6,5};
-        int n = arr.length;
-        Arrays.sort(arr);
-        if(n == 0 && n == 1){
-            System.out.print("-1" );
-            return;
+        int largest = 0;
+        int secondlarg = 0;
+        for(int i = 0; i<arr.length;i++){
+            if(arr[i]>largest){
+                secondlarg = largest;
+                largest = arr[i];
+            }
+            else if(arr[i]>secondlarg && arr[i]<largest){
+                secondlarg = arr[i];
+            }
         }
-        int small = arr[1];
-        int largest = arr[n-2];
-
-        System.out.println(small);
-        System.out.println(largest);
+        
+        // System.out.print(arr.length);
+        System.out.print(largest);
+        System.out.print(secondlarg);
     }
 }
 
