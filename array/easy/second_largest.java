@@ -12,6 +12,7 @@ public class second_largest {
                 secondlarg = arr[i];
             }
         }
+
         
         // System.out.print(arr.length);
         System.out.print(largest);
